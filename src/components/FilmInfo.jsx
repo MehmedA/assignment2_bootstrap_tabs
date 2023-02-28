@@ -10,7 +10,7 @@ const FilmInfo = ({ data }) => {
       </div>
       <article className="d-flex align-items-center">
         <div className="d-flex ">
-          <span className="text-danger p-1 rounded-3">{tags}</span>
+          <span className="text-danger p-1 rounded-3">{tags.join(" | ")}</span>
         </div>
       </article>
       <article className="d-flex align-items-center">
@@ -22,7 +22,7 @@ const FilmInfo = ({ data }) => {
             <StarRatingComponent
               name="rate"
               starCount={5}
-              value={5}
+              value={Math.floor(rate/2)}
               editing={true}
             />
           </div>
